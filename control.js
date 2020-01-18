@@ -4,8 +4,7 @@ var content;
 document.addEventListener("DOMContentLoaded", function(event) { 
     elements = document.getElementsByClassName("hero");
     content = document.getElementsByClassName("content")[0];
-    content.style.top = elements[0].offsetHeight -(document.documentElement.scrollTop )+ "px";
-    OnScroll();
+    content.style.top = elements[0].offsetHeight+ "px";
 });  
 
 
