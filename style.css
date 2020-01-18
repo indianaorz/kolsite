@@ -1,6 +1,10 @@
 img{
     width:100%;
 }
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
 body{
     margin:0;
     padding:0;
@@ -9,6 +13,23 @@ body{
 
 .hero{
     position: absolute;
+    margin-top:72px;
+}
+.app-bar{
+    max-height:72px;
+    height:72px;
+    background-color:#11092c;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    z-index:4;
 }
 
 .content{
