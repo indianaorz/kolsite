@@ -1,0 +1,19 @@
+img{
+    width:100%;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color: #0e0403;
+}
+
+.hero{
+    position: absolute;
+}
+
+.content{
+    position:absolute;
+    height:2000px;
+    background-color:#071f00;
+    width:100%;
+}
