@@ -71,7 +71,7 @@ body{
     .groundtile{
         background-image: url("Assets/Images/ground.png");
         background-repeat: repeat-x;
-        width: 281%;
+        width: 500%;
         height: 200px;
         margin-left: -100%;
         margin-top: -90px;
