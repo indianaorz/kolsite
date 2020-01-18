@@ -26,6 +26,8 @@ body{
 .fog{
     position: absolute;
     margin-top:72px;
+    opacity: 0.2;
+    background-color: rgb(0,0,0);
 }
 
 .hero{
