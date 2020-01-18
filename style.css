@@ -9,7 +9,6 @@ body{
     margin:0;
     padding:0;
     background-color: #000;
-    overflow-x:hidden;
 }
 
 .hero{
@@ -73,12 +72,12 @@ body{
     .groundtile{
         background-image: url("Assets/Images/ground.png");
         background-repeat: repeat-x;
-        width: 500%;
+        width: 125%;
         height: 200px;
-        margin-left: -200%;
+        margin-left: -12%;
         margin-top: -90px;
         transform: scale(.8);
-        position:relative;
+        position: relative;
     }
     
   }
@@ -101,12 +100,12 @@ body{
     .groundtile{
         background-image: url("Assets/Images/ground.png");
         background-repeat: repeat-x;
-        width: 500%;
+        width: 333%;
         height: 200px;
-        margin-left: -200%;
+        margin-left: -116%;
         margin-top: -90px;
         transform: scale(.3);
-        position:relative;
+        position: relative;
     }
     
   }
