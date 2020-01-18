@@ -2,6 +2,18 @@ img{
     width:100%;
 }
 
+.gif{
+    display:block;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.gif-container{
+    margin-top:128px;
+    padding-bottom:128px;
+}
+
 html{
     font-family: 'Roboto', sans-serif;
 }
@@ -39,7 +51,6 @@ body{
 
 .content{
     position:absolute;
-    height:2000px;
     background-color:#0f0503;
     width:100%;
     z-index:10;
