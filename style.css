@@ -9,6 +9,7 @@ body{
     margin:0;
     padding:0;
     background-color: #000;
+    overflow-x:hidden;
 }
 
 .hero{
@@ -49,21 +50,22 @@ body{
 
 .playerandprops{
     background-image: url("Assets/Images/playerandprops.png");
-    width: 800px;
+    width: 766px;
     height: 273px;
     margin-top: -415px;
     margin-left: 26%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1212px) {
 
     .playerandprops{
         background-image: url("Assets/Images/playerandprops.png");
-        width: 800px;
+        width: 766px;
         height: 273px;
-        margin-top: -320px;
-        margin-left: -79px;
-        transform: scale(.5);
+        margin-top: -372px;
+        margin-left: 119px;
+        transform: scale(.8);
+        position: relative;
     
     }
 
@@ -73,9 +75,38 @@ body{
         background-repeat: repeat-x;
         width: 500%;
         height: 200px;
-        margin-left: -100%;
+        margin-left: -200%;
         margin-top: -90px;
-        transform: scale(.5);
+        transform: scale(.8);
+        position:relative;
+    }
+    
+  }
+
+  
+@media only screen and (max-width: 800px) {
+
+    .playerandprops{
+        background-image: url("Assets/Images/playerandprops.png");
+        width: 766px;
+        height: 273px;
+        margin-top: -289px;
+        margin-left: -192px;
+        transform: scale(.3);
+        position: relative;
+    
+    }
+
+    
+    .groundtile{
+        background-image: url("Assets/Images/ground.png");
+        background-repeat: repeat-x;
+        width: 500%;
+        height: 200px;
+        margin-left: -200%;
+        margin-top: -90px;
+        transform: scale(.3);
+        position:relative;
     }
     
   }
