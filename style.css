@@ -37,6 +37,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-right: auto;
+    box-shadow: 32px 33px 99px 113px #0f0503 inset;
 }
 
 .hero{
@@ -49,6 +50,12 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-right: auto;
+    box-shadow: 32px 33px 99px 113px #0f0503 inset;
+}
+
+.full{
+    max-width: 100%;
+    filter: blur(3px);
 }
 
 .app-bar{
