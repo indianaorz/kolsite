@@ -53,6 +53,46 @@ body{
     box-shadow: 32px 33px 99px 113px #0f0503 inset;
 }
 
+
+.hero-header{
+    margin-left: 13%;
+    margin-right: 13%;
+    font-size: 2em;
+    border-bottom: solid 1px;
+    padding-bottom: 12px;
+}
+
+.hero-align{
+    display:flex;
+    justify-content: space-around;
+}
+.hero-text{
+    color: white;
+    position: absolute;
+    top: 50%;
+    z-index: 50;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-description{
+    font-size: .4em;
+    opacity: .6;
+    margin-top: 12px;
+    border-top: solid 1px;
+    padding-top: 13px;
+}
+
+.hero-selections{
+    border: solid;
+    border-radius: 3px;
+    padding: 12px 64px;
+    font-size: 2em;
+    margin: 32px;
+    background-color:rgba(0,0,0,.5);
+}
+
 .full{
     max-width: 100%;
     filter: blur(3px);
