@@ -27,6 +27,7 @@ body{
 .fog{
     position: fixed;
     margin-top:-100x;
+    min-width:800px;
     opacity: 0.2;
     background-color: rgb(0,0,0);
     max-width: 1700px;
@@ -43,6 +44,7 @@ body{
     position: fixed;
     margin-top: -100px;
     max-width: 1700px;
+    min-width:800px;
     margin-left: auto;
     left: 0;
     right: 0;
@@ -164,8 +166,11 @@ body{
     width: 45%;
     font-size: 3em;
     position: sticky;
-    height: 300px;
-    top: 12px;
+    height: 176px;
+    top: 0px;
+    padding-top:12px;
+    background-color: #0f0503;
+    z-index: 1;
 }
 
 .playtype-description{
@@ -209,8 +214,15 @@ body{
   }
 
   
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 
+    .content{
+        position:absolute;
+        top:300px;
+        background-color:#0f0503;
+        width:100%;
+        z-index:10;
+    }
     .playtype-section{
         display:flex;
         justify-content: space-around;
@@ -225,27 +237,8 @@ body{
         font-size: 3em;
     }
 
-    .playerandprops{
-        background-image: url("Assets/Images/playerandprops.png");
-        width: 766px;
-        height: 273px;
-        margin-top: -289px;
-        margin-left: -192px;
-        transform: scale(.3);
-        position: relative;
-    
-    }
-
-    
-    .groundtile{
-        background-image: url("Assets/Images/ground.png");
-        background-repeat: repeat-x;
-        width: 333%;
-        height: 200px;
-        margin-left: -116%;
-        margin-top: -90px;
-        transform: scale(.3);
-        position: relative;
+    .playtype-description{
+    width: 100%;
     }
     
   }
