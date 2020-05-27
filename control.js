@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     for(var i = 0; i < fogs.length; i++){
         fogs[i].style.zIndex = i;
     }
-    setTimeout(OnScroll, 200);
+    //setTimeout(OnScroll, 200);
 });  
 
-
+var distFromTop = 72;
 function OnScroll(){
     for(var i = 0; i < elements.length; i++){
-        elements[i].style.top = -(document.documentElement.scrollTop - 72 ) * (Math.pow(i,2)  / Math.pow(elements.length,2)) + "px";
+        elements[i].style.top = -(document.documentElement.scrollTop - distFromTop ) * (Math.pow(i,2)  / Math.pow(elements.length,2)) + "px";
         elements[i].style.zIndex = i;
     }
-    content.style.top = elements[0].offsetHeight -(document.documentElement.scrollTop - 72)+ "px";
+    content.style.top = elements[0].offsetHeight -(document.documentElement.scrollTop - distFromTop)+ "px";
 }

@@ -1,80 +1,270 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Kingdom of Light</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="control.js"> </script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    </head>
-    <body onscroll="OnScroll()" onresize="OnScroll()">
-        <div class="app-bar">
-            Kingdom of Light
+
+<head>
+    <title>Kingdom of Light</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="control.js"> </script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <div class="app-bar">
+        Kingdom of Light
+    </div> -->
+
+
+    <img class="fog " src="Assets/Images/overlook0.png">
+    <img class="fog " src="Assets/Images/overlook0.png">
+    <img class="fog " src="Assets/Images/overlook0.png">
+    <img class="fog " src="Assets/Images/overlook0.png">
+    <img class="fog " src="Assets/Images/overlook0.png">
+    <img class="fog " src="Assets/Images/overlook0.png">
+    <img class="fog " src="Assets/Images/overlook0.png">
+    <img class="fog " src="Assets/Images/overlook0.png" style="max-width: 100%;">
+
+
+
+    <img class="hero " src="Assets/Images/overlook1.png">
+    <img class="hero " src="Assets/Images/overlook2.png">
+    <img class="hero " src="Assets/Images/overlook3.png">
+    <img class="hero " src="Assets/Images/overlook4.png">
+    <img class="hero " src="Assets/Images/overlook5.png" style="z-index: 10;">
+    <img class="hero " src="Assets/Images/overlook6.png">
+    <img class="hero" src="Assets/Images/overlook7.png" style="max-width: 100%;">
+
+    <div class="content">
+        <div class="groundtile">
+        </div>
+        <div class="playerandprops">
+
         </div>
 
-
-        <img class="fog " src="Assets/Images/overlook0.png">
-        <img class="fog " src="Assets/Images/overlook0.png">
-        <img class="fog " src="Assets/Images/overlook0.png">
-        <img class="fog " src="Assets/Images/overlook0.png">
-        <img class="fog " src="Assets/Images/overlook0.png">
-        <img class="fog " src="Assets/Images/overlook0.png">
-        <img class="fog " src="Assets/Images/overlook0.png">
-        <img class="fog " src="Assets/Images/overlook0.png" style="max-width: 100%;">
-
-
-
-        <img class="hero " src="Assets/Images/overlook1.png" >
-        <img class="hero " src="Assets/Images/overlook2.png">
-        <img class="hero " src="Assets/Images/overlook3.png">
-        <img class="hero " src="Assets/Images/overlook4.png">
-        <img class="hero " src="Assets/Images/overlook5.png">
-        <img class="hero " src="Assets/Images/overlook6.png">
-        <img class="hero" src="Assets/Images/overlook7.png" style="max-width: 100%;">
-        <div class="hero-text">
-            <div>
-                <div class = "hero-header">Select your playtype</div>
-                <div class="hero-align">
-                    <div class = "hero-selections">
-                        Casual
-                        <div class="hero-description">
-                            You enjoy playing games for the story and the experience. 
-                            You're looking for a game that introduces new mechanics slowly and does not require precise technical input to complete the story.
+        <div class="gif-container">
+            <!-- <div class="hero-text">
+                    <div>
+                        <div class = "hero-header">Select your playtype</div>
+                        <div class="hero-align">
+                            <div class = "hero-selections">
+                                Casual
+                                <div class="hero-description">
+                                    You enjoy playing games for the story and the experience. 
+                                    You're looking for a game that introduces new mechanics slowly and does not require precise technical input to complete the story.
+                                </div>
+                            </div>
+                            <div class = "hero-selections">
+                                Speed Runner
+                            
+                                <div class="hero-description">
+                                    Beating a game once is not enough. You long to take advantage of in-game mechanics to break the sequence of the game and access areas you're not supposed to be in yet.
+                                    You're looking to optimize and conquer each room to achieve the fastest clear time.
+                                </div>
+                            </div class = "hero-selections">
+                            <div class = "hero-selections">
+                                Hardcore
+                            
+                                <div class="hero-description">
+                                    You find enjoyment in frustration. You long for the pressure of being near achieving a seemingly impossible goal and one small mistake can cause you to lose all your progress. 
+                                    You're looking for a game that will force you to master all the hidden mechanics and execute them flawlessly for a legendary victory.
+                                </div>
+                            </div class = "hero-selections">
                         </div>
                     </div>
-                    <div class = "hero-selections">
-                        Speed Runner
-                    
-                        <div class="hero-description">
-                            Beating a game once is not enough. You long to take advantage of in-game mechanics to break the sequence of the game and access areas you're not supposed to be in yet.
-                            You're looking to optimize and conquer each room to achieve the fastest clear time.
+                </div> -->
+
+            <div class="content-header">Designed for all types of players</div>
+            <div class="playtype-section">
+                <div class="playtype-header">
+                    <div>Casual</div>
+                    <div class="hero-description">
+                        You enjoy playing games for the story and the experience.
+                        You're looking for a game that introduces new mechanics slowly and does not require precise
+                        technical input to complete the story.
+                    </div>
+                </div>
+                <div class="playtype-description">
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/lightforest.jpg">
                         </div>
-                    </div class = "hero-selections">
-                    <div class = "hero-selections">
-                        Hardcore
-                    
-                        <div class="hero-description">
-                            You find enjoyment in frustration. You long for the pressure of being near achieving a seemingly impossible goal and one small mistake can cause you to lose all your progress. 
-                            You're looking for a game that will force you to master all the hidden mechanics and execute them flawlessly for a legendary victory.
+                        <div>
+                            Kingdom of Light gradually and safely introduces players to new mechanics and enemies
+                            before ramping up the difficulty.
                         </div>
-                    </div class = "hero-selections">
+                    </div>
+
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/dark puzzles.jpg">
+                        </div>
+                        <div>
+                            Kingdom of Light rewards exploration with lowering the difficulty of the game.
+                            If the player gets stuck moving in one direction there’s many other paths the player can
+                            explore.
+                            Then they can return to the previously too difficult area powered up and clear it easier
+                            with more health, greater damage, or new movement techniques.
+                            Exploration and killing enemies rewards you with money which can be used to purchase
+                            movement techniques at the town which will make moving around more fun and dodging enemies
+                            or advancing easier
+                        </div>
+                    </div>
+
+
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/darkforest.jpg">
+                        </div>
+                        <div>
+                            Kingdom of Light offers multiple paths to the same goal,
+                            but guides the player with an invisible hand preventing
+                            backtracking to too many areas that the player should not have access to
+                            in order to reduce frustration.
+                        </div>
+                    </div>
+
+
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/map.jpg">
+                        </div>
+                        <div>
+                            The in game map hints to important locations and keeps track of where the player
+                            has been so in subsequent play sessions they can pick up where the left off
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-        <div class="content">
-            <div class="groundtile">
-            </div>
-            <div class="playerandprops">
 
+            <div class="playtype-section">
+                <div class="playtype-header">
+                    <div>Speed Runner</div>
+                    <div class="hero-description">
+                        You enjoy playing games for the story and the experience.
+                        You're looking for a game that introduces new mechanics slowly and does not require precise
+                        technical input to complete the story.
+                    </div>
+                </div>
+                <div class="playtype-description">
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/lightforest.jpg">
+                        </div>
+                        <div>
+                            Kingdom of Light gradually and safely introduces players to new mechanics and enemies
+                            before ramping up the difficulty.
+                        </div>
+                    </div>
+
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/dark puzzles.jpg">
+                        </div>
+                        <div>
+                            Kingdom of Light rewards exploration with lowering the difficulty of the game.
+                            If the player gets stuck moving in one direction there’s many other paths the player can
+                            explore.
+                            Then they can return to the previously too difficult area powered up and clear it easier
+                            with more health, greater damage, or new movement techniques.
+                            Exploration and killing enemies rewards you with money which can be used to purchase
+                            movement techniques at the town which will make moving around more fun and dodging enemies
+                            or advancing easier
+                        </div>
+                    </div>
+
+
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/darkforest.jpg">
+                        </div>
+                        <div>
+                            Kingdom of Light offers multiple paths to the same goal,
+                            but guides the player with an invisible hand preventing
+                            backtracking to too many areas that the player should not have access to
+                            in order to reduce frustration.
+                        </div>
+                    </div>
+
+
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/map.jpg">
+                        </div>
+                        <div>
+                            The in game map hints to important locations and keeps track of where the player
+                            has been so in subsequent play sessions they can pick up where the left off
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
-            <div class="gif-container">
-                <img class="gif" src="Assets/Gifs/2020-01-27 Getting Powerups.gif">
-                <img class="gif" src="Assets/Gifs/2020-01-20 Moth Fixed Layers.gif">
-                <img class="gif" src="Assets/Gifs/2020-01-20 Owl Parabola.gif">
-                <img class="gif" src="Assets/Gifs/2019-11-18 Movement.gif">
-                <img class="gif" src="Assets/Gifs/2019-11-20 New Forest Tileset.gif">
-                <img class="gif" src="Assets/Gifs/2019-12-19 Wave Pixels.gif">
+            <div class="playtype-section">
+                <div class="playtype-header">
+                    <div>Hardcore</div>
+                    <div class="hero-description">
+                        You enjoy playing games for the story and the experience.
+                        You're looking for a game that introduces new mechanics slowly and does not require precise
+                        technical input to complete the story.
+                    </div>
+                </div>
+                <div class="playtype-description">
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/lightforest.jpg">
+                        </div>
+                        <div>
+                            Kingdom of Light gradually and safely introduces players to new mechanics and enemies
+                            before ramping up the difficulty.
+                        </div>
+                    </div>
+
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/dark puzzles.jpg">
+                        </div>
+                        <div>
+                            Kingdom of Light rewards exploration with lowering the difficulty of the game.
+                            If the player gets stuck moving in one direction there’s many other paths the player can
+                            explore.
+                            Then they can return to the previously too difficult area powered up and clear it easier
+                            with more health, greater damage, or new movement techniques.
+                            Exploration and killing enemies rewards you with money which can be used to purchase
+                            movement techniques at the town which will make moving around more fun and dodging enemies
+                            or advancing easier
+                        </div>
+                    </div>
+
+
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/darkforest.jpg">
+                        </div>
+                        <div>
+                            Kingdom of Light offers multiple paths to the same goal,
+                            but guides the player with an invisible hand preventing
+                            backtracking to too many areas that the player should not have access to
+                            in order to reduce frustration.
+                        </div>
+                    </div>
+
+
+                    <div class="playtype-description-subsection">
+                        <div>
+                            <img class="gif" src="Assets/Images/Screenshots/map.jpg">
+                        </div>
+                        <div>
+                            The in game map hints to important locations and keeps track of where the player
+                            has been so in subsequent play sessions they can pick up where the left off
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
+
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
