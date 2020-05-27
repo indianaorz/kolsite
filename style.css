@@ -192,6 +192,7 @@ body{
     padding-top:12px;
     background-color: #0f0503;
     z-index: 1;
+    padding-top: 4em;
 }
 
 .playtype-description{
@@ -308,6 +309,7 @@ body{
         font-size: 3em;
         padding-bottom:12px;
         border-bottom:solid 1px white;
+        padding-top: 0px;
     }
 
     .playtype-description{
