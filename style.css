@@ -27,6 +27,7 @@ img{
     margin-right:auto;
     margin-top:24px;
     margin-bottom:24px;
+    border: solid white 1px;
 }
 
 .gif-container{
