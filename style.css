@@ -83,6 +83,8 @@ body{
     margin-top: 12px;
     border-top: solid 1px;
     padding-top: 13px;
+    font-weight:100;
+    font-style:italic;
 }
 
 .hero-selections{
@@ -177,6 +179,7 @@ body{
     width: 40%;
     min-width:400px;
     opacity: .7;
+    font-weight:100;
 }
 
 .playtype-description-subsection{
