@@ -30,8 +30,10 @@ img{
 }
 
 .gif-container{
-    margin-top:128px;
     padding-bottom:128px;
+    width:80%;
+    margin: 0 10%;
+    margin-top:128px;
 }
 
 html{
@@ -150,8 +152,8 @@ body{
     position:absolute;
     top:600px;
     background-color:#0f0503;
-    width:100%;
-    z-index:10;
+    z-index:10;    
+    width: 100%;
 }
 
 .groundtile{
@@ -187,7 +189,7 @@ body{
     font-size: 3em;
     position: sticky;
     min-height: 250px;
-    max-height: 300px;
+    max-height: 570px;
     top: 0px;
     padding-top:12px;
     background-color: #0f0503;
@@ -282,6 +284,8 @@ body{
         background-color:#0f0503;
         width:100%;
         z-index:10;
+        margin-left: 0;
+        margin-right: 0;
     }
   }
 
@@ -294,6 +298,8 @@ body{
         background-color:#0f0503;
         width:100%;
         z-index:10;
+        margin-left: 0;
+        margin-right: 0;
     }
     .playtype-section{
         display:flex;
