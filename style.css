@@ -5,7 +5,7 @@ img{
 .left-hero-border{
     height: 1000px;
     color: black;
-    background-color: #0f0503;
+    background-color: #000e05;
     width: 15vw;
     left: 0;
     position: fixed;
@@ -14,7 +14,7 @@ img{
 .right-hero-border{
     height: 1000px;
     color: black;
-    background-color: #0f0503;
+    background-color: #000e05;
     width: 15vw;
     right: 0;
     position: fixed;
@@ -44,7 +44,7 @@ html{
 body{
     margin:0;
     padding:0;
-    background-color:#0f0503;
+    background-color:#000e05;
 }
 
 .fog{
@@ -59,7 +59,7 @@ body{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 32px 33px 99px 113px #0f0503 inset;
+    box-shadow: 32px 33px 99px 113px #000e05 inset;
 }
 
 .hero{
@@ -72,7 +72,7 @@ body{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 32px 33px 99px 113px #0f0503 inset;
+    box-shadow: 32px 33px 99px 113px #000e05 inset;
 }
 
 
@@ -152,7 +152,7 @@ body{
 .content{
     position:absolute;
     top:600px;
-    background-color:#0f0503;
+    background-color:#000e05;
     z-index:10;    
     width: 100%;
 }
@@ -164,6 +164,7 @@ body{
     height: 200px;
     margin-top: -64px;
     z-index:12;
+    position: relative;
 }
 
 .playerandprops{
@@ -193,7 +194,7 @@ body{
     max-height: 570px;
     top: 0px;
     padding-top:12px;
-    background-color: #0f0503;
+    background-color: #000e05;
     z-index: 1;
     padding-top: 4em;
 }
@@ -216,7 +217,7 @@ body{
     .left-hero-border{
         height: 1000px;
         color: black;
-        background-color: #0f0503;
+        background-color: #000e05;
         width: 10vw;
         left: 0;
         position: fixed;
@@ -225,7 +226,7 @@ body{
     .right-hero-border{
         height: 1000px;
         color: black;
-        background-color: #0f0503;
+        background-color: #000e05;
         width: 10vw;
         right: 0;
         position: fixed;
@@ -237,7 +238,7 @@ body{
     .left-hero-border{
         height: 1000px;
         color: black;
-        background-color: #0f0503;
+        background-color: #000e05;
         width: 0%;
         left: 0;
         position: fixed;
@@ -246,7 +247,7 @@ body{
     .right-hero-border{
         height: 1000px;
         color: black;
-        background-color: #0f0503;
+        background-color: #000e05;
         width: 0%;
         right: 0;
         position: fixed;
@@ -282,7 +283,7 @@ body{
     .content{
         position:absolute;
         top:400px;
-        background-color:#0f0503;
+        background-color:#000e05;
         width:100%;
         z-index:10;
         margin-left: 0;
@@ -296,7 +297,7 @@ body{
     .content{
         position:absolute;
         top:400px;
-        background-color:#0f0503;
+        background-color:#000e05;
         width:100%;
         z-index:10;
         margin-left: 0;
