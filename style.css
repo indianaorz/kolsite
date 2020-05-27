@@ -336,8 +336,6 @@ body{
         justify-content: space-around;
         flex-direction: column;
         width:100%;
-        border-top: rgba(255,255,255,0.4) solid 1px;
-        border-bottom: solid 1px rgba(255,255,255,0.4);
         padding: 24px 24px 0 24px;
     }
     .playtype-header{
