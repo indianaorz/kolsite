@@ -321,7 +321,9 @@ body{
 
   
 @media only screen and (max-width: 1000px) {
-
+html{
+    font-size:32px;
+}
     .content{
         position:absolute;
         top:400px;
