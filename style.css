@@ -17,6 +17,7 @@ img{
 
 html{
     font-family: 'Roboto', sans-serif;
+    font-size:24px;
 }
 body{
     margin:0;
@@ -36,7 +37,6 @@ body{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-right: auto;
     box-shadow: 32px 33px 99px 113px #0f0503 inset;
 }
 
@@ -49,7 +49,6 @@ body{
     left: 0;
     right: 0;
     margin-left: auto;
-    margin-right: auto;
     margin-right: auto;
     box-shadow: 32px 33px 99px 113px #0f0503 inset;
 }
@@ -166,7 +165,7 @@ body{
     width: 45%;
     font-size: 3em;
     position: sticky;
-    height: 176px;
+    height: 250px;
     top: 0px;
     padding-top:12px;
     background-color: #0f0503;
@@ -235,6 +234,7 @@ body{
         color:white;
         width:100%;
         font-size: 3em;
+        border-bottom:solid 1px white;
     }
 
     .playtype-description{
