@@ -162,6 +162,12 @@ body{
     color:rgba(255,255,255,.5);
 }
 
+.footer{
+    color: rgba(255,255,255,.4);
+    margin: 24px;
+    text-align:right;
+}
+
 .content-subheader{
     text-align: center;
     font-size: 1.5em;
