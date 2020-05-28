@@ -162,6 +162,14 @@ body{
     color:rgba(255,255,255,.5);
 }
 
+.content-subheader{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 12px;
+    color:rgba(255,255,255,.4);
+    font-style: italic;
+}
+
 .content{
     position:absolute;
     top:600px;
@@ -375,6 +383,6 @@ html{
 @media only screen and (max-width: 1000px) {
 
     .company{
-        top:2em;
+        top:2   em;
     }
 }
