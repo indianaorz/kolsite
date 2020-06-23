@@ -81,9 +81,11 @@ body{
 .fog{
     position: fixed;
     margin-top:-100x;
-    min-width:100%;
+    min-width:800px;
+    max-width: 100%;
     opacity: 0.2;
     background-color: rgb(0,0,0);
+    max-width: 1700px;
     margin-left: auto;
     left: 0;
     right: 0;
@@ -95,7 +97,8 @@ body{
 .hero{
     position: fixed;
     margin-top: -100px;
-    min-width:100%;
+    max-width: 100%;
+    min-width:800px;
     margin-left: auto;
     left: 0;
     right: 0;
