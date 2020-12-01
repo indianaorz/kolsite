@@ -1,10 +1,10 @@
 html{
-    filter:brightness(1.5);
 }
 
 img{
     width:100%;
 }
+
 
 .company{
     color: rgba(255,255,255,.6);
@@ -22,7 +22,7 @@ img{
 .left-hero-border{
     height: 1000px;
     color: black;
-    background-color: #000e05;
+    background-color: #001f0d;
     width: 15vw;
     left: 0;
     position: fixed;
@@ -31,7 +31,7 @@ img{
 .right-hero-border{
     height: 1000px;
     color: black;
-    background-color: #000e05;
+    background-color: #001f0d;
     width: 15vw;
     right: 0;
     position: fixed;
@@ -66,6 +66,7 @@ img{
     width: 60%;
     height: 60%;
     margin-left:20%;
+    margin-top:120px;
 }
 
 html{
@@ -90,12 +91,11 @@ body{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 32px 33px 99px 113px #000e05 inset;
+    box-shadow: 32px 33px 99px 113px #001f0d inset;
 }
 
 .hero{
     position: fixed;
-    margin-top: -100px;
     max-width: 100%;
     min-width:800px;
     margin-left: auto;
@@ -103,7 +103,7 @@ body{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 32px 33px 99px 113px #000e05 inset;
+    box-shadow: 32px 33px 99px 113px #001f0d inset;
 }
 
 
@@ -237,10 +237,11 @@ body{
 .playerandprops{
     background-image: url("Assets/Images/playerandprops.png");
     width: 766px;
-    height: 273px;
-    margin-top: -415px;
-    margin-left: 26%;
-    z-index:11;
+    height: 289px;
+    margin-top: -397px;
+    margin-left: 31%;
+    position: absolute;
+    z-index:15;
 }
 
 .playtype-section{
@@ -262,7 +263,7 @@ body{
     max-height: 800px;
     top: 0px;
     padding-top:12px;
-    background-color: #000e05;
+    background-color: #001f0d;
     z-index: 1;
     padding-top: 4em;
 }
@@ -289,12 +290,16 @@ body{
     border-bottom: solid 1px rgba(255,255,255,0.4);
 }
 
+.title{
+    margin-top:-305px;
+}
+
 @media only screen and (max-width: 2000px) {
     
     .left-hero-border{
         height: 1000px;
         color: black;
-        background-color: #000e05;
+        background-color: #001f0d;
         width: 10vw;
         left: 0;
         position: fixed;
@@ -302,10 +307,13 @@ body{
     .right-hero-border{
         height: 1000px;
         color: black;
-        background-color: #000e05;
+        background-color: #001f0d;
         width: 10vw;
         right: 0;
         position: fixed;
+    }
+    .title{
+        margin-top:-205px;
     }
 }
 @media only screen and (max-width: 1850px) {
@@ -313,7 +321,7 @@ body{
     .left-hero-border{
         height: 1000px;
         color: black;
-        background-color: #000e05;
+        background-color: #001f0d;
         width: 0%;
         left: 0;
         position: fixed;
@@ -321,10 +329,22 @@ body{
     .right-hero-border{
         height: 1000px;
         color: black;
-        background-color: #000e05;
+        background-color: #001f0d;
         width: 0%;
         right: 0;
         position: fixed;
+    }
+    .title{
+        margin-top:-105px;
+    }
+    
+    .content{
+        position:absolute;
+        top:400px;
+        background-color:#001f0d;
+        width:100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -359,11 +379,17 @@ body{
     .content{
         position:absolute;
         top:400px;
-        background-color:#000e05;
+        background-color:#001f0d;
         width:100%;
         margin-left: 0;
         margin-right: 0;
     }
+
+    
+    .title{
+        margin-top:-105px;
+    }
+
   }
 
   
@@ -374,7 +400,7 @@ html{
     .content{
         position:absolute;
         top:400px;
-        background-color:#000e05;
+        background-color:#001f0d;
         width:100%;
         margin-left: 0;
         margin-right: 0;
@@ -416,6 +442,9 @@ html{
         margin-left:0;
     }
 
+    .title{
+        margin-top:0;
+    }
     
   }
 
