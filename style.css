@@ -22,7 +22,7 @@ img{
 .left-hero-border{
     height: 1000px;
     color: black;
-    background-color: #001f0d;
+    background-color: #001408;
     width: 15vw;
     left: 0;
     position: fixed;
@@ -31,7 +31,7 @@ img{
 .right-hero-border{
     height: 1000px;
     color: black;
-    background-color: #001f0d;
+    background-color: #001408;
     width: 15vw;
     right: 0;
     position: fixed;
@@ -90,7 +90,7 @@ body{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 32px 33px 99px 113px #001f0d inset;
+    box-shadow: 32px 33px 99px 113px hsl(246 85% 2% / 1) inset;
 }
 
 .hero{
@@ -100,9 +100,10 @@ body{
     margin-left: auto;
     left: 0;
     right: 0;
+    margin-top:-15vw;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 32px 33px 99px 113px #001f0d inset;
+    box-shadow: 32px 33px 99px 113px hsl(246 85% 2% / 1) inset;
 }
 
 
@@ -262,7 +263,7 @@ body{
     max-height: 800px;
     top: 0px;
     padding-top:12px;
-    background-color: #001f0d;
+    background-color: #001408;
     z-index: 1;
     padding-top: 4em;
 }
@@ -290,7 +291,8 @@ body{
 }
 
 .title{
-    margin-top:-305px;
+    margin-top:-9%;
+    position:fixed;
 }
 
 @media only screen and (min-width: 1800px){
@@ -304,7 +306,7 @@ body{
     .left-hero-border{
         height: 1000px;
         color: black;
-        background-color: #001f0d;
+        background-color: #001408;
         width: 10vw;
         left: 0;
         position: fixed;
@@ -312,13 +314,10 @@ body{
     .right-hero-border{
         height: 1000px;
         color: black;
-        background-color: #001f0d;
+        background-color: #001408;
         width: 10vw;
         right: 0;
         position: fixed;
-    }
-    .title{
-        margin-top:-205px;
     }
 }
 @media only screen and (max-width: 1850px) {
@@ -326,7 +325,7 @@ body{
     .left-hero-border{
         height: 1000px;
         color: black;
-        background-color: #001f0d;
+        background-color: #001408;
         width: 0%;
         left: 0;
         position: fixed;
@@ -334,19 +333,16 @@ body{
     .right-hero-border{
         height: 1000px;
         color: black;
-        background-color: #001f0d;
+        background-color: #001408;
         width: 0%;
         right: 0;
         position: fixed;
-    }
-    .title{
-        margin-top:-105px;
     }
     
     .content{
         position:absolute;
         top:400px;
-        background-color:#001f0d;
+        background-color:#001408;
         width:100%;
         margin-left: 0;
         margin-right: 0;
@@ -384,16 +380,13 @@ body{
     .content{
         position:absolute;
         top:400px;
-        background-color:#001f0d;
+        background-color:#001408;
         width:100%;
         margin-left: 0;
         margin-right: 0;
     }
 
     
-    .title{
-        margin-top:-105px;
-    }
 
   }
 
@@ -405,7 +398,7 @@ html{
     .content{
         position:absolute;
         top:400px;
-        background-color:#001f0d;
+        background-color:#001408;
         width:100%;
         margin-left: 0;
         margin-right: 0;
@@ -447,9 +440,6 @@ html{
         margin-left:0;
     }
 
-    .title{
-        margin-top:0;
-    }
     
   }
 
