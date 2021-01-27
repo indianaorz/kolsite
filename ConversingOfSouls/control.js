@@ -14,13 +14,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });  
 
 function OnSetServer(){
-    const Http = new XMLHttpRequest();
-    const url= document.getElementById("server").value;
-    Http.open("GET", url);
-    Http.send();
+    var url = document.getElementById("server").value;
 
-    Http.onreadystatechange = (e) => {
-        document.getElementById("serverText").innerHTML = Http.responseText;
-    }
+    $.ajax({
+        url: url
+      }).done(function(data) {
+        document.getElementById("serverText").innerHTML = data;
+      }).fail(function() {
+        // Handle error
+    });
 
 }
