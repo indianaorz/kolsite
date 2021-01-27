@@ -1,4 +1,73 @@
 html{
+    font-family: roboto;
+    font-size:16px;
+}
+
+.characters{
+    display: flex;
+    align-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.character-card{
+    width: 40%;
+    border: solid black 8px;
+    padding: 12px;
+}
+.traits{
+    border:solid black 4px;
+    padding: 12px;
+    margin:12px;
+}
+.trait-box{
+    border:solid black 2px;
+    padding: 12px;
+    margin:12px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trait{
+    border:solid black 1px;
+    padding: 4px;
+    margin:4px;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+.trait:hover{
+    border:solid grey 1px;
+}
+
+#character-name{
+    cursor:pointer;
+}
+#character-name:hover{
+    border:solid grey 1px;
 }
 
 
+.name{
+    font-size:2em;
+}
+
+.positive{
+    background-color:hsl(120,20%,50%);
+}
+.neutral{
+    background-color:hsl(120,0%,50%);
+}
+.negative{
+    background-color:hsl(0,20%,50%);
+}
+
+.output{
+    border: solid hsl(200,20%,50%) 8px;
+}
+.action{
+    border: solid hsl(0,20%,50%) 8px;
+}

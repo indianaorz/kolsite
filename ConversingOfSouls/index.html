@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Conversing of Souls</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -13,11 +14,10 @@
 </head>
 
 <body>
-    <div id="serverText"></div>
     <input id="server" value="https://localhost:44311/gameserver" />
 
     <br>
-    <button onclick="StartGame()">Start Game</button>
+    <button onclick="ResetGame()">Reset Game</button>
 
     <br>
 
@@ -30,9 +30,75 @@
     <br>
     <button onclick="GetAllCharacters()">Get All Characters</button>
 
-    <label for="CharacterSelect">Choose a Character:</label>
-    <select id="CharacterSelect" onchange="ChangeCharacter()">
-    </select>
+
+    <button onclick="StartGame()">Start Game</button>
+
+    <div class="output">
+        <div id="serverText"></div>
+    </div>
+
+    <div class="action">
+
+        <label>Action: </label>
+        <select id="BaseAction" onchange="">
+            <option>Focus</option>
+            <option>Control</option>
+            <option>Unleash</option>
+            <option>Flow</option>
+            <option>Question</option>
+            <option>Enhance</option>
+            <option>Combine</option>
+        </select>
+
+        
+        <br>
+        <label>Target: </label>
+        <div id="target"></div>
+
+        <br>
+        <textarea id="dialogue"></textarea>
+
+        <br>
+        <button onclick="SendAction()">Submit</button>
+    </div>
+
+    <div class="characters">
+        <div class="character-card">
+            <div>Player</div>
+            <label for="PlayerSelect">Choose Player Character:</label>
+            <select id="PlayerSelect" onchange="ChangePlayer()">
+            </select>
+
+            <div id="player-name" class="name"></div>
+
+            <div class="traits">
+                <div class="trait-box" id="player-traits">
+
+                </div>
+            </div>
+            <div class="subtexts">
+                <div class="subtext-box" id="player-subtexts">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="character-card">
+            <div>Focused Character</div>
+            <label for="CharacterSelect">Focus on a Character:</label>
+            <select id="CharacterSelect" onchange="ChangeCharacter()">
+            </select>
+
+
+
+            <div id="character-name" onclick="FocusCharacterName()" class="name"></div>
+            <div class="traits">
+                <div class="trait-box" id="character-traits">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <br>
 
