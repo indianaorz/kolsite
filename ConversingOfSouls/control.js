@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function OnSetServer(){
     const Http = new XMLHttpRequest();
-    const url= document.getElementById("server");
+    const url= document.getElementById("server").value;
     Http.open("GET", url);
     Http.send();
 
