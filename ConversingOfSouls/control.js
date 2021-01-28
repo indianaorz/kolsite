@@ -366,7 +366,7 @@ function AssignAttacks(idPrefix, idSuffix, data) {
     data.forEach(function (attack) {
         element.innerHTML +=
             "<div class = 'trait' onclick=SelectTarget('Attack~on~" + attack.trait.toString().replaceAll(" ", "~") + "','" + idPrefix + "')"
-            + " style = 'box-shadow: 0px 0px 20px " + (attack.essence * 5) + "px hsl(0,50%,50%)'" +
+            + " style = 'box-shadow: 0px 0px 20px " + (attack.essence) + "px hsl(0,50%,50%)'" +
             "> Attack on " + attack.trait.toString() + "</div>"
     });
 }
@@ -556,6 +556,9 @@ function CompleteSubmit(data) {
 
     var outputWindow = document.getElementById("serverText");
     outputWindow.scrollIntoView(false);
+
+    GetTraits();
+    GetDetails();
 
     ChangePlayer();
     ChangeCharacter();

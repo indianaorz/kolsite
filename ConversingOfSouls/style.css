@@ -3,11 +3,13 @@ html{
     font-size:24px;
     color:white;
     font-weight:300;
-    background-color:#222;
+    background-color:#151515;
 }
 body{
-    
-    margin: 0 6%;
+}
+
+.content{
+    margin: 0 15%;
 }
 
 .footer{

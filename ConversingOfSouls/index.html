@@ -11,165 +11,167 @@
     <script src="control.js"> </script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
         rel="stylesheet">
-        <script src="https://kit.fontawesome.com/e140bf62aa.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e140bf62aa.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <input id="server" value="https://localhost:44311/gameserver" />
-    <button onclick="ResetGame()" type="submit">Reset Game</button>
-
-    <br>
-
-
-    <input id="characterName" placeholder="New Character Name"/>
-    <button onclick="OnCreateEmptyCharacter()" type="submit">+ Empty</button>
-    <button onclick="OnGenerateCharacter()" type="submit">+ Random</button>
-
-    <br>
-
-    <input id="detailInfo" placeholder="Scene Detail"/>
-    <button onclick="AddDetail()" type="submit">Add Scene Detail</button>
-
-    <br>
-
-    <button onclick="RefreshGameOutput()" type="submit" class="refresh"><i class="fas fa-sync-alt"></i></button>
-
-    <button onclick="RefreshGameOutputDebug()" type="submit" class="debug"><i class="fas fa-bug"></i></button>
-
-    <!-- <button onclick="EndRound()" type="submit">End Round</button> -->
-
-    <div class="output card">
-        <div id="serverText"></div>
-    </div>
-
-    <div class="action card">
-
-        <button onclick="SendAction()" type="submit" class="act">Act!</button>
-
-        <div class="text-entry">
-            <textarea id="dialogue" class="dialogue" placeholder="Reaction"></textarea>
-            <textarea id="dialogue2" class="dialogue" placeholder="Action"></textarea>
-        </div>
+    <div class="content">
+        <input id="server" value="https://localhost:44311/gameserver" />
+        <button onclick="ResetGame()" type="submit">Reset Game</button>
 
         <br>
 
-        <div class="action-row">
-            <div class="action-columns">
-                <select id="BaseAction1" onchange="" onclick="SetActiveActionIndex(1)">
-                    <option>Rest</option>
-                    <option>Focus</option>
-                    <option>Control</option>
-                    <option>Unleash</option>
-                    <option>Flow</option>
-                </select>
 
+        <input id="characterName" placeholder="New Character Name" />
+        <button onclick="OnCreateEmptyCharacter()" type="submit">+ Empty</button>
+        <button onclick="OnGenerateCharacter()" type="submit">+ Random</button>
 
-                <br>
-                <div id="target1"></div>
+        <br>
 
-                <br>
-            </div>
-            <div class="action-columns">
-                <select id="BaseAction2" onchange="" onclick="SetActiveActionIndex(2)">
-                    <option>Rest</option>
-                    <option>Focus</option>
-                    <option>Control</option>
-                    <option>Unleash</option>
-                    <option>Flow</option>
-                </select>
-                <br>
-                <div id="target2"></div>
-                <br>
-            </div>
-            <div class="action-columns">
+        <input id="detailInfo" placeholder="Scene Detail" />
+        <button onclick="AddDetail()" type="submit">Add Scene Detail</button>
 
-                <select id="BaseAction3" onchange="" onclick="SetActiveActionIndex(3)">
-                    <option>Rest</option>
-                    <option>Focus</option>
-                    <option>Control</option>
-                    <option>Unleash</option>
-                    <option>Flow</option>
-                </select>
-                <br>
-                <div id="target3"></div>
+        <br>
 
-                <br>
-            </div>
+        <button onclick="RefreshGameOutput()" type="submit" class="refresh"><i class="fas fa-sync-alt"></i></button>
+
+        <button onclick="RefreshGameOutputDebug()" type="submit" class="debug"><i class="fas fa-bug"></i></button>
+
+        <!-- <button onclick="EndRound()" type="submit">End Round</button> -->
+
+        <div class="output card">
+            <div id="serverText"></div>
         </div>
 
-    </div>
+        <div class="action card">
 
-    <div class="details">
-        <div class="traits">
-            <div class="trait-box" id="detail-traits">
+            <button onclick="SendAction()" type="submit" class="act">Act!</button>
 
-            </div>
-        </div>
-    </div>
-    <div class="attacks">
-        <div class="traits">
-            <div class="trait-box" id="attack-traits">
-
-            </div>
-        </div>
-    </div>
-
-    <div class="characters">
-        <div class="character-card  card" id="player-card">
-            <div>Player</div>
-            <select id="PlayerSelect" onchange="ChangePlayer()">
-            </select>
-
-            <div class = "character-title">
-                <div id="player-name" class="name"></div>
-                <div id="player-health" ></div>
+            <div class="text-entry">
+                <textarea id="dialogue" class="dialogue" placeholder="Reaction"></textarea>
+                <textarea id="dialogue2" class="dialogue" placeholder="Action"></textarea>
             </div>
 
-            <div class="traits">
-                <div class="trait-box" id="player-traits">
-
-                </div>
-            </div>
-            <div class="subtexts">
-                <div class="subtext-box" id="player-subtexts">
-
-                </div>
-            </div>
-            
-            
-            <select id="newPersonalTrait" style="width:80%">
-            </select>
-            <button onclick="AddPersonalTrait()" type="submit">+</button>
             <br>
-            <input id="personalDetailInfo" style="width:78%" placeholder = "New Personal Detail" />
-            <button onclick="AddPersonalDetail()" type="submit">+</button>
+
+            <div class="action-row">
+                <div class="action-columns">
+                    <select id="BaseAction1" onchange="" onclick="SetActiveActionIndex(1)">
+                        <option>Rest</option>
+                        <option>Focus</option>
+                        <option>Control</option>
+                        <option>Unleash</option>
+                        <option>Flow</option>
+                    </select>
+
+
+                    <br>
+                    <div id="target1"></div>
+
+                    <br>
+                </div>
+                <div class="action-columns">
+                    <select id="BaseAction2" onchange="" onclick="SetActiveActionIndex(2)">
+                        <option>Rest</option>
+                        <option>Focus</option>
+                        <option>Control</option>
+                        <option>Unleash</option>
+                        <option>Flow</option>
+                    </select>
+                    <br>
+                    <div id="target2"></div>
+                    <br>
+                </div>
+                <div class="action-columns">
+
+                    <select id="BaseAction3" onchange="" onclick="SetActiveActionIndex(3)">
+                        <option>Rest</option>
+                        <option>Focus</option>
+                        <option>Control</option>
+                        <option>Unleash</option>
+                        <option>Flow</option>
+                    </select>
+                    <br>
+                    <div id="target3"></div>
+
+                    <br>
+                </div>
+            </div>
+
         </div>
 
-        <div class="character-card  card" id="character-card">
-            <div>Focused On</div>
-            <select id="CharacterSelect" onchange="ChangeCharacter()">
-            </select>
-
-
-            <div class= "character-title">
-                <div id="character-name" onclick="FocusCharacterName()" class="name"></div>
-                <div id="character-health"></div>
-            </div>
+        <div class="details">
             <div class="traits">
-                <div class="trait-box" id="character-traits">
-
-                </div>
-            </div>
-            <div class="subtexts">
-                <div class="subtext-box" id="character-subtexts">
+                <div class="trait-box" id="detail-traits">
 
                 </div>
             </div>
         </div>
-    </div>
+        <div class="attacks">
+            <div class="traits">
+                <div class="trait-box" id="attack-traits">
 
-    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="characters">
+            <div class="character-card  card" id="player-card">
+                <div>Player</div>
+                <select id="PlayerSelect" onchange="ChangePlayer()">
+                </select>
+
+                <div class="character-title">
+                    <div id="player-name" class="name"></div>
+                    <div id="player-health"></div>
+                </div>
+
+                <div class="traits">
+                    <div class="trait-box" id="player-traits">
+
+                    </div>
+                </div>
+                <div class="subtexts">
+                    <div class="subtext-box" id="player-subtexts">
+
+                    </div>
+                </div>
+
+
+                <select id="newPersonalTrait" style="width:80%">
+                </select>
+                <button onclick="AddPersonalTrait()" type="submit">+</button>
+                <br>
+                <input id="personalDetailInfo" style="width:78%" placeholder="New Personal Detail" />
+                <button onclick="AddPersonalDetail()" type="submit">+</button>
+            </div>
+
+            <div class="character-card  card" id="character-card">
+                <div>Knows about</div>
+                <select id="CharacterSelect" onchange="ChangeCharacter()">
+                </select>
+
+
+                <div class="character-title">
+                    <div id="character-name" onclick="FocusCharacterName()" class="name"></div>
+                    <div id="character-health"></div>
+                </div>
+                <div class="traits">
+                    <div class="trait-box" id="character-traits">
+
+                    </div>
+                </div>
+                <div class="subtexts">
+                    <div class="subtext-box" id="character-subtexts">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
 
 </body>
 
