@@ -29,7 +29,7 @@ function ResetGame() {
 }
 
 function RefreshGameOutput() {
-
+    GetTraits();
     GetDetails();
     GetAllCharacters();
     GetAttacks();
@@ -40,6 +40,28 @@ function RefreshGameOutput() {
         url: url
     }).done(function (data) {
         document.getElementById("serverText").innerHTML = data.output;
+        var outputWindow = document.getElementById("serverText");
+        outputWindow.scrollIntoView(false);
+    }).fail(function () {
+        // Handle error
+    });
+
+}
+
+function RefreshGameOutputDebug() {
+    GetTraits();
+    GetDetails();
+    GetAllCharacters();
+    GetAttacks();
+
+    var url = document.getElementById("server").value + "/Debug";
+
+    $.ajax({
+        url: url
+    }).done(function (data) {
+        document.getElementById("serverText").innerHTML = data.output;
+        var outputWindow = document.getElementById("serverText");
+        outputWindow.scrollIntoView(false);
     }).fail(function () {
         // Handle error
     });
@@ -61,7 +83,35 @@ function OnGenerateCharacter() {
         data: JSON.stringify(body),
         crossDomain: true,
         success: function (data) {
+            document.getElementById("serverText").innerHTML = name + " created.";
+            document.getElementById("characterName").value = "";
+        },
+        error: function (data) {
+            console.log(JSON.stringify(data));
+        },
+        dataType: "json",
+        contentType: "application/json; charset=utf-8"
+    });
+}
+
+function OnCreateEmptyCharacter() {
+    var url = document.getElementById("server").value + "/Character";
+    var name = document.getElementById("characterName").value;
+
+
+    var body = {
+        "name": name,
+        "empty": true
+    };
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: JSON.stringify(body),
+        crossDomain: true,
+        success: function (data) {
             document.getElementById("serverText").innerHTML = name + " created."
+            document.getElementById("characterName").value = "";
         },
         error: function (data) {
             console.log(JSON.stringify(data));
@@ -187,17 +237,46 @@ function AssignCharacterData(idPrefix, data) {
 
 function AssignTraits(idPrefix, idSuffix, data) {
 
+    var element = document.getElementById(idPrefix + "-" + idSuffix);
+    element.innerHTML = "";
+
     if (data == null) {
         return;
     }
-    var element = document.getElementById(idPrefix + "-" + idSuffix);
-    element.innerHTML = "";
     data.forEach(function (trait) {
         element.innerHTML +=
             "<div class = 'trait' onclick=SelectTarget('" + trait.toString().replaceAll(" ", "~") + "','" + idPrefix + "')>" + trait.toString() + "</div>"
     });
 }
 
+var allTraits;
+function GetTraits() {
+
+    var url = document.getElementById("server").value + "/Traits";
+
+    $.ajax({
+        type: "GET",
+        url: url,
+        crossDomain: true,
+        success: function (data) {
+            allTraits = data;
+
+            document.getElementById("newPersonalTrait").innerHTML = "";
+            allTraits.forEach(function (trait) {
+                document.getElementById("newPersonalTrait").innerHTML +=
+                    '<option value="' + trait + '">' + trait + '</option>';
+            });
+
+
+        },
+        error: function (data) {
+            console.log(JSON.stringify(data));
+        },
+        dataType: "json",
+        contentType: "application/json; charset=utf-8"
+    });
+
+}
 
 function GetDetails() {
 
@@ -239,6 +318,7 @@ function AddDetail() {
         success: function (data) {
             AssignTraits("detail", "traits", data);
             GetTraitFocusData();
+            document.getElementById("detailInfo").value = "";
         },
         error: function (data) {
             console.log(JSON.stringify(data));
@@ -264,7 +344,7 @@ function GetAttacks() {
 
             GetTraitFocusData();
 
-            
+
 
         },
         error: function (data) {
@@ -310,6 +390,35 @@ function AddPersonalDetail() {
         crossDomain: true,
         success: function (data) {
             AssignTraits("player", "subtexts", data);
+        },
+        error: function (data) {
+            console.log(JSON.stringify(data));
+        },
+        dataType: "json",
+        contentType: "application/json; charset=utf-8"
+    });
+
+}
+
+
+function AddPersonalTrait() {
+
+    var url = document.getElementById("server").value + "/Character/Trait";
+    var trait = document.getElementById("newPersonalTrait").value;
+    var id = document.getElementById("PlayerSelect").value;
+
+    var body = {
+        "characterId": id,
+        "trait": trait
+    };
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: JSON.stringify(body),
+        crossDomain: true,
+        success: function (data) {
+            AssignTraits("player", "traits", data);
         },
         error: function (data) {
             console.log(JSON.stringify(data));
@@ -446,8 +555,9 @@ function CompleteSubmit(data) {
     document.getElementById("target3").innerHTML = "";
 
     var outputWindow = document.getElementById("serverText");
-    outputWindow.scrollTop = outputWindow.scrollHeight;
+    outputWindow.scrollIntoView(false);
 
+    ChangePlayer();
     ChangeCharacter();
     GetTraitFocusData();
     GetAttacks();

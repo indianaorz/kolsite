@@ -5,6 +5,10 @@ html{
     font-weight:300;
     background-color:#222;
 }
+body{
+    
+    margin: 0 6%;
+}
 
 .footer{
     position:static;
@@ -18,6 +22,35 @@ html{
     flex-direction: row;
     justify-content: center;
     width: 100%;
+}
+
+.refresh{
+    position: fixed;
+    right: 24px;
+    top: 24px;
+    font-size: 4em;
+    background-color: transparent;
+    color: orange;
+    transition: all .2s;
+    border:none;
+    cursor:pointer;
+}
+.refresh:hover{
+    color: white;
+}
+.debug{
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    font-size: 1em;
+    background-color: transparent;
+    color: red;
+    transition: all .2s;
+    border:none;
+    cursor:pointer;
+}
+.debug:hover{
+    color: white;
 }
 
 .card{
@@ -41,12 +74,12 @@ html{
 
 
 .traits{
-    border:solid black 4px;
+    /* border:solid black 4px;
     padding: 12px;
-    margin:12px;
+    margin:12px; */
 }
 .trait-box{
-    border:solid black 2px;
+    /* border:solid black 2px; */
     padding: 12px;
     margin:12px;
     display:flex;
@@ -136,6 +169,15 @@ html{
     overflow-y: scroll;
 }
 
+input, select{
+    font-size: 1em;
+    background-color: #111;
+    color: #aaa;
+    margin: 4px 0;
+    width: 50%;
+}
+
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -169,6 +211,13 @@ input[type=text], select {
     border-radius: 4px;
     min-height: 64px;
     margin-left: 58%;
+  }
+  button{
+    background-color: hsl(30,72%,50%);
+    border-radius: 4px;
+    min-height: 36px;
+    font-size: 1em;
+    color: #111;
   }
 
   .text-entry{

@@ -11,31 +11,33 @@
     <script src="control.js"> </script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
         rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e140bf62aa.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <input id="server" value="https://localhost:44311/gameserver" />
-
-    <br>
     <button onclick="ResetGame()" type="submit">Reset Game</button>
 
     <br>
 
 
-    <input id="characterName" />
-    <button onclick="OnGenerateCharacter()" type="submit">Generate Character</button>
+    <input id="characterName" placeholder="New Character Name"/>
+    <button onclick="OnCreateEmptyCharacter()" type="submit">+ Empty</button>
+    <button onclick="OnGenerateCharacter()" type="submit">+ Random</button>
 
     <br>
 
-    <input id="detailInfo" />
-    <button onclick="AddDetail()" type="submit">Add Detail</button>
+    <input id="detailInfo" placeholder="Scene Detail"/>
+    <button onclick="AddDetail()" type="submit">Add Scene Detail</button>
 
     <br>
 
-    <button onclick="RefreshGameOutput()" type="submit">Refresh</button>
+    <button onclick="RefreshGameOutput()" type="submit" class="refresh"><i class="fas fa-sync-alt"></i></button>
 
-    <button onclick="EndRound()" type="submit">End Round</button>
+    <button onclick="RefreshGameOutputDebug()" type="submit" class="debug"><i class="fas fa-bug"></i></button>
+
+    <!-- <button onclick="EndRound()" type="submit">End Round</button> -->
 
     <div class="output card">
         <div id="serverText"></div>
@@ -54,7 +56,6 @@
 
         <div class="action-row">
             <div class="action-columns">
-                <label>Action: </label>
                 <select id="BaseAction1" onchange="" onclick="SetActiveActionIndex(1)">
                     <option>Rest</option>
                     <option>Focus</option>
@@ -65,13 +66,11 @@
 
 
                 <br>
-                <label>Target: </label>
                 <div id="target1"></div>
 
                 <br>
             </div>
             <div class="action-columns">
-                <label>Action: </label>
                 <select id="BaseAction2" onchange="" onclick="SetActiveActionIndex(2)">
                     <option>Rest</option>
                     <option>Focus</option>
@@ -80,13 +79,11 @@
                     <option>Flow</option>
                 </select>
                 <br>
-                <label>Target: </label>
                 <div id="target2"></div>
                 <br>
             </div>
             <div class="action-columns">
 
-                <label>Action: </label>
                 <select id="BaseAction3" onchange="" onclick="SetActiveActionIndex(3)">
                     <option>Rest</option>
                     <option>Focus</option>
@@ -95,7 +92,6 @@
                     <option>Flow</option>
                 </select>
                 <br>
-                <label>Target: </label>
                 <div id="target3"></div>
 
                 <br>
@@ -122,7 +118,6 @@
     <div class="characters">
         <div class="character-card  card" id="player-card">
             <div>Player</div>
-            <label for="PlayerSelect">Choose Player Character:</label>
             <select id="PlayerSelect" onchange="ChangePlayer()">
             </select>
 
@@ -142,13 +137,17 @@
                 </div>
             </div>
             
-            <input id="personalDetailInfo" />
-            <button onclick="AddPersonalDetail()" type="submit">Add Personal Detail</button>
+            
+            <select id="newPersonalTrait" style="width:80%">
+            </select>
+            <button onclick="AddPersonalTrait()" type="submit">+</button>
+            <br>
+            <input id="personalDetailInfo" style="width:78%" placeholder = "New Personal Detail" />
+            <button onclick="AddPersonalDetail()" type="submit">+</button>
         </div>
 
         <div class="character-card  card" id="character-card">
-            <div>Focused Character</div>
-            <label for="CharacterSelect">Focus on a Character:</label>
+            <div>Focused On</div>
             <select id="CharacterSelect" onchange="ChangeCharacter()">
             </select>
 
@@ -159,6 +158,11 @@
             </div>
             <div class="traits">
                 <div class="trait-box" id="character-traits">
+
+                </div>
+            </div>
+            <div class="subtexts">
+                <div class="subtext-box" id="character-subtexts">
 
                 </div>
             </div>
