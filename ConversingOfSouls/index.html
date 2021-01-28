@@ -11,59 +11,105 @@
     <script src="control.js"> </script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
     <input id="server" value="https://localhost:44311/gameserver" />
 
     <br>
-    <button onclick="ResetGame()">Reset Game</button>
+    <button onclick="ResetGame()" type="submit">Reset Game</button>
 
     <br>
 
 
     <input id="characterName" />
-    <button onclick="OnGenerateCharacter()">Generate Character</button>
-    <div class="footer">© 2019 - 2020 Flying Fire, LLC</div>
+    <button onclick="OnGenerateCharacter()" type="submit">Generate Character</button>
     </div>
 
     <br>
-    <button onclick="GetAllCharacters()">Get All Characters</button>
 
 
-    <button onclick="StartGame()">Start Game</button>
+    <button onclick="GetAllCharacters()" type="submit">Get All Characters</button>
 
-    <div class="output">
+
+    <button onclick="RefreshGameOutput()" type="submit">Refresh Game Output</button>
+
+    <button onclick="EndRound()" type="submit">End Round</button>
+
+    <div class="output card">
         <div id="serverText"></div>
     </div>
 
-    <div class="action">
+    <div class="action card">
 
-        <label>Action: </label>
-        <select id="BaseAction" onchange="">
-            <option>Focus</option>
-            <option>Control</option>
-            <option>Unleash</option>
-            <option>Flow</option>
-            <option>Question</option>
-            <option>Enhance</option>
-            <option>Combine</option>
-        </select>
+        <div class="action-row">
+            <div class="action-columns">
+                <label>Action: </label>
+                <select id="BaseAction1" onchange="" onclick="SetActiveActionIndex(1)">
+                    <option>Rest</option>
+                    <option>Focus</option>
+                    <option>Control</option>
+                    <option>Unleash</option>
+                    <option>Flow</option>
+                    <option>Question</option>
+                    <option>Enhance</option>
+                    <option>Combine</option>
+                </select>
 
-        
-        <br>
-        <label>Target: </label>
-        <div id="target"></div>
 
-        <br>
+                <br>
+                <label>Target: </label>
+                <div id="target1"></div>
+
+                <br>
+            </div>
+            <div  class="action-columns">
+                <label>Action: </label>
+                <select id="BaseAction2" onchange="" onclick="SetActiveActionIndex(2)">
+                    <option>Rest</option>
+                    <option>Focus</option>
+                    <option>Control</option>
+                    <option>Unleash</option>
+                    <option>Flow</option>
+                    <option>Question</option>
+                    <option>Enhance</option>
+                    <option>Combine</option>
+                </select>
+                <br>
+                <label>Target: </label>
+                <div id="target2"></div>
+                <br>
+            </div>
+            <div class="action-columns">
+
+                <label>Action: </label>
+                <select id="BaseAction3" onchange="" onclick="SetActiveActionIndex(3)">
+                    <option>Rest</option>
+                    <option>Focus</option>
+                    <option>Control</option>
+                    <option>Unleash</option>
+                    <option>Flow</option>
+                    <option>Question</option>
+                    <option>Enhance</option>
+                    <option>Combine</option>
+                </select>
+                <br>
+                <label>Target: </label>
+                <div id="target3"></div>
+
+                <br>
+            </div>
+        </div>
         <textarea id="dialogue"></textarea>
 
         <br>
-        <button onclick="SendAction()">Submit</button>
+        <button onclick="SendAction()" type="submit" class="act">Act!</button>
     </div>
 
+
     <div class="characters">
-        <div class="character-card">
+        <div class="character-card  card">
             <div>Player</div>
             <label for="PlayerSelect">Choose Player Character:</label>
             <select id="PlayerSelect" onchange="ChangePlayer()">
@@ -83,7 +129,7 @@
             </div>
         </div>
 
-        <div class="character-card">
+        <div class="character-card  card">
             <div>Focused Character</div>
             <label for="CharacterSelect">Focus on a Character:</label>
             <select id="CharacterSelect" onchange="ChangeCharacter()">
@@ -103,5 +149,7 @@
     <br>
 
 </body>
+
+<div class="footer">© 2019 - 2020 Flying Fire, LLC</div>
 
 </html>

@@ -28,13 +28,13 @@ function ResetGame() {
 
 }
 
-function StartGame() {
-    var url = document.getElementById("server").value + "/Start";
+function RefreshGameOutput() {
+    var url = document.getElementById("server").value + "/Output";
 
     $.ajax({
         url: url
     }).done(function (data) {
-        document.getElementById("serverText").innerHTML = data;
+        document.getElementById("serverText").innerHTML = data.output;
     }).fail(function () {
         // Handle error
     });
@@ -56,7 +56,6 @@ function OnGenerateCharacter() {
         data: JSON.stringify(body),
         crossDomain: true,
         success: function (data) {
-            document.getElementById("serverText").innerHTML = JSON.stringify(data);
         },
         error: function (data) {
             console.log(JSON.stringify(data));
@@ -106,7 +105,6 @@ function ChangeCharacter() {
         data: JSON.stringify(body),
         crossDomain: true,
         success: function (data) {
-            document.getElementById("serverText").innerHTML = JSON.stringify(data);
             AssignCharacterData("character", data);
 
         },
@@ -144,7 +142,6 @@ function ChangePlayer() {
         url: url,
         crossDomain: true,
         success: function (data) {
-            document.getElementById("serverText").innerHTML = JSON.stringify(data);
             AssignCharacterData("player", data[0]);
             AssignCharacterData("player", data[0]);
         },
@@ -178,6 +175,88 @@ function AssignTraits(idPrefix, idSuffix, data){
 }
 
 function SelectTarget(detail){
-    document.getElementById("target").innerHTML = detail;
+    document.getElementById("target" + activeActionIndex).innerHTML = detail;
     SetTargetType("Trait");
+}
+
+
+
+function EndRound() {
+
+    var url = document.getElementById("server").value + "/Round";
+    var id = document.getElementById("PlayerSelect").value;
+
+    var body = {
+        "playerId": id
+    };
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: JSON.stringify(body),
+        crossDomain: true,
+        success: function (data) {
+            document.getElementById("serverText").innerHTML = data.output;
+        },
+        error: function (data) {
+            console.log(JSON.stringify(data));
+        },
+        dataType: "json",
+        contentType: "application/json; charset=utf-8"
+    });
+}
+
+var activeActionIndex = 0;
+function SetActiveActionIndex(index){
+    activeActionIndex = index;
+}
+
+function SendAction() {
+
+    var id = document.getElementById("PlayerSelect").value;
+    var baseAction1  = document.getElementById("BaseAction1").value;
+    var target1  = document.getElementById("target1").innerHTML;
+    var baseAction2  = document.getElementById("BaseAction2").value;
+    var target2  = document.getElementById("target2").innerHTML;
+    var baseAction3  = document.getElementById("BaseAction3").value;
+    var target3  = document.getElementById("target3").innerHTML;
+    var dialogue  = document.getElementById("dialogue").value;
+    var url = document.getElementById("server").value + "/Round/Action";
+
+    var body = {
+        "characterId": id,
+        "actions":[
+            {
+                "actionType":baseAction1,
+                "target": target1, 
+            },
+            {
+                "actionType":baseAction2,
+                "target": target2, 
+            },
+            {
+                "actionType":baseAction3,
+                "target": target3, 
+            }
+        ],
+        "dialogue":dialogue
+    };
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: JSON.stringify(body),
+        crossDomain: true,
+        success: function (data) {
+            document.getElementById("serverText").innerHTML = data.output;
+
+            //Clear the dialogue to avoid double submit
+            document.getElementById("dialogue").value="";
+        },
+        error: function (data) {
+            console.log(JSON.stringify(data));
+        },
+        dataType: "json",
+        contentType: "application/json; charset=utf-8"
+    });
 }
