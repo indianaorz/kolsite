@@ -43,6 +43,12 @@
 
     <div class="action card">
 
+        <button onclick="SendAction()" type="submit" class="act">Act!</button>
+
+        <textarea id="dialogue"></textarea>
+
+        <br>
+
         <div class="action-row">
             <div class="action-columns">
                 <label>Action: </label>
@@ -64,7 +70,7 @@
 
                 <br>
             </div>
-            <div  class="action-columns">
+            <div class="action-columns">
                 <label>Action: </label>
                 <select id="BaseAction2" onchange="" onclick="SetActiveActionIndex(2)">
                     <option>Rest</option>
@@ -101,10 +107,7 @@
                 <br>
             </div>
         </div>
-        <textarea id="dialogue"></textarea>
 
-        <br>
-        <button onclick="SendAction()" type="submit" class="act">Act!</button>
     </div>
 
 
