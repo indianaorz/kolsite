@@ -390,6 +390,8 @@ function AddPersonalDetail() {
         crossDomain: true,
         success: function (data) {
             AssignTraits("player", "subtexts", data);
+
+            document.getElementById("personalDetailInfo").value = "";
         },
         error: function (data) {
             console.log(JSON.stringify(data));
