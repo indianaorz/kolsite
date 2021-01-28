@@ -25,15 +25,15 @@
 
     <input id="characterName" />
     <button onclick="OnGenerateCharacter()" type="submit">Generate Character</button>
-    </div>
 
     <br>
 
+    <input id="detailInfo" />
+    <button onclick="AddDetail()" type="submit">Add Detail</button>
 
-    <button onclick="GetAllCharacters()" type="submit">Get All Characters</button>
+    <br>
 
-
-    <button onclick="RefreshGameOutput()" type="submit">Refresh Game Output</button>
+    <button onclick="RefreshGameOutput()" type="submit">Refresh</button>
 
     <button onclick="EndRound()" type="submit">End Round</button>
 
@@ -45,7 +45,10 @@
 
         <button onclick="SendAction()" type="submit" class="act">Act!</button>
 
-        <textarea id="dialogue"></textarea>
+        <div class="text-entry">
+            <textarea id="dialogue" class="dialogue" placeholder="Reaction"></textarea>
+            <textarea id="dialogue2" class="dialogue" placeholder="Action"></textarea>
+        </div>
 
         <br>
 
@@ -58,9 +61,6 @@
                     <option>Control</option>
                     <option>Unleash</option>
                     <option>Flow</option>
-                    <option>Question</option>
-                    <option>Enhance</option>
-                    <option>Combine</option>
                 </select>
 
 
@@ -78,9 +78,6 @@
                     <option>Control</option>
                     <option>Unleash</option>
                     <option>Flow</option>
-                    <option>Question</option>
-                    <option>Enhance</option>
-                    <option>Combine</option>
                 </select>
                 <br>
                 <label>Target: </label>
@@ -96,9 +93,6 @@
                     <option>Control</option>
                     <option>Unleash</option>
                     <option>Flow</option>
-                    <option>Question</option>
-                    <option>Enhance</option>
-                    <option>Combine</option>
                 </select>
                 <br>
                 <label>Target: </label>
@@ -110,15 +104,32 @@
 
     </div>
 
+    <div class="details">
+        <div class="traits">
+            <div class="trait-box" id="detail-traits">
+
+            </div>
+        </div>
+    </div>
+    <div class="attacks">
+        <div class="traits">
+            <div class="trait-box" id="attack-traits">
+
+            </div>
+        </div>
+    </div>
 
     <div class="characters">
-        <div class="character-card  card">
+        <div class="character-card  card" id="player-card">
             <div>Player</div>
             <label for="PlayerSelect">Choose Player Character:</label>
             <select id="PlayerSelect" onchange="ChangePlayer()">
             </select>
 
-            <div id="player-name" class="name"></div>
+            <div class = "character-title">
+                <div id="player-name" class="name"></div>
+                <div id="player-health" ></div>
+            </div>
 
             <div class="traits">
                 <div class="trait-box" id="player-traits">
@@ -130,17 +141,22 @@
 
                 </div>
             </div>
+            
+            <input id="personalDetailInfo" />
+            <button onclick="AddPersonalDetail()" type="submit">Add Personal Detail</button>
         </div>
 
-        <div class="character-card  card">
+        <div class="character-card  card" id="character-card">
             <div>Focused Character</div>
             <label for="CharacterSelect">Focus on a Character:</label>
             <select id="CharacterSelect" onchange="ChangeCharacter()">
             </select>
 
 
-
-            <div id="character-name" onclick="FocusCharacterName()" class="name"></div>
+            <div class= "character-title">
+                <div id="character-name" onclick="FocusCharacterName()" class="name"></div>
+                <div id="character-health"></div>
+            </div>
             <div class="traits">
                 <div class="trait-box" id="character-traits">
 

@@ -100,8 +100,13 @@ html{
     justify-content: space-evenly;
 }
 
-#dialogue{
-    width: 97%;
+.character-title{
+    display:flex;
+    justify-content: space-between;
+}
+
+.dialogue{
+    width: 50%;
     min-height: 5em;
     font-size: 1.5em;
     background-color: #222;
@@ -164,4 +169,12 @@ input[type=text], select {
     border-radius: 4px;
     min-height: 64px;
     margin-left: 58%;
+  }
+
+  .text-entry{
+      display:flex;
+  }
+
+  textarea{
+      width:50%;
   }
